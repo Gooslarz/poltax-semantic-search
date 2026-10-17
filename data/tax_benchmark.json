@@ -1,0 +1,94 @@
+{
+  "rulings": [
+    {
+      "id": "0114-KDIP3-1.4011.1",
+      "tax": "PIT",
+      "title": "Okulary korekcyjne dla programisty B2B",
+      "text": "Wydatki na zakup okularów korekcyjnych oraz szkieł do pracy przy monitorze ekranowym nie stanowią kosztów uzyskania przychodów przedsiębiorcy świadczącego usługi IT w ramach jednoosobowej działalności gospodarczej, gdyż mają charakter osobisty."
+    },
+    {
+      "id": "0112-KDIL2-2.4011.2",
+      "tax": "PIT",
+      "title": "Ulga IP Box 5% dla twórcy oprogramowania",
+      "text": "Dochód programisty osiągany z odpłatnego przeniesienia autorskich praw majątkowych do wytworzonego kodu źródłowego kwalifikuje się jako dochód z kwalifikowanego prawa własności intelektualnej i podlega opodatkowaniu stawką 5% w ramach ulgi IP Box (art. 30ca ustawy o PIT)."
+    },
+    {
+      "id": "0115-KDIT1-1.4012.3",
+      "tax": "VAT",
+      "title": "Stawka VAT 8% na wyroby medyczne (salon optyczny)",
+      "text": "Dostawa wyrobów medycznych takich jak soczewki kontaktowe oraz okulary korekcyjne realizowana przez salon optyczny na rzecz klientów indywidualnych podlega opodatkowaniu obniżoną stawką podatku od towarów i usług (VAT) w wysokości 8%."
+    },
+    {
+      "id": "0111-KDIB1-3.4010.4",
+      "tax": "CIT",
+      "title": "Limit 150 000 zł dla leasingu samochodu osobowego",
+      "text": "Opłaty wynikające z umowy leasingu operacyjnego samochodu osobowego o napędzie spalinowym zaliczane są do kosztów uzyskania przychodów w części nieprzekraczającej proporcji kwoty 150 000 zł do wartości samochodu."
+    },
+    {
+      "id": "0111-KDIB1-3.4010.5",
+      "tax": "CIT",
+      "title": "Podwyższony limit 225 000 zł dla samochodu elektrycznego",
+      "text": "W przypadku samochodów osobowych będących pojazdami elektrycznymi w rozumieniu ustawy o elektromobilności, limit zaliczania odpisów amortyzacyjnych oraz rat leasingu operacyjnego do kosztów podatkowych wynosi 225 000 zł."
+    },
+    {
+      "id": "0113-KDIPT2-1.4011.6",
+      "tax": "PIT",
+      "title": "Ryczałt 12% vs 8.5% w branży IT",
+      "text": "Przychody uzyskiwane ze świadczenia usług związanych z projektowaniem, programowaniem i rozwojem oprogramowania (PKWiU 62.01) podlegają opodatkowaniu ryczałtem od przychodów ewidencjonowanych według stawki 12%, natomiast usługi wsparcia technicznego (helpdesk) niezwiązane z kodowaniem mogą korzystać ze stawki 8,5%."
+    },
+    {
+      "id": "0114-KDIP3-2.4011.7",
+      "tax": "PIT",
+      "title": "Koszty domowego biura (czynsz i media) w działalności IT",
+      "text": "Przedsiębiorca prowadzący działalność gospodarczą w zakresie tworzenia oprogramowania w prywatnym mieszkaniu może zaliczyć do kosztów uzyskania przychodów część wydatków na energię elektryczną oraz internet w proporcji wykorzystywanej na cele służbowe."
+    },
+    {
+      "id": "0112-KDIL1-3.4012.8",
+      "tax": "VAT",
+      "title": "Eksport usług IT dla kontrahenta z USA (odwrotne obciążenie)",
+      "text": "Świadczenie usług programistycznych i doradczych w zakresie informatyki na rzecz spółki z siedzibą w Stanach Zjednoczonych (poza terytorium Unii Europejskiej) nie podlega opodatkowaniu podatkiem VAT w Polsce zgodnie z art. 28b ustawy o VAT; fakturę wystawia się ze stawką NP (nie podlega)."
+    }
+  ],
+  "queries": [
+    {
+      "question": "Czy programista B2B może wrzucić w koszty zakup okularów do pracy przy komputerze?",
+      "expected_id": "0114-KDIP3-1.4011.1",
+      "category": "Standard Semantic"
+    },
+    {
+      "question": "Jak obniżyć podatek dochodowy przy komercjalizacji własnych algorytmów i programów?",
+      "expected_id": "0112-KDIL2-2.4011.2",
+      "category": "Colloquial Paraphrase"
+    },
+    {
+      "question": "Jakiemu opodatkowaniu podlega sprzedaż soczewek i okularów w sklepie optycznym?",
+      "expected_id": "0115-KDIT1-1.4012.3",
+      "category": "Standard Semantic"
+    },
+    {
+      "question": "Programista IT w oprogramowaniu a limit 150 000 zł w umowie",
+      "expected_id": "0111-KDIB1-3.4010.4",
+      "category": "Statute / Number Trap"
+    },
+    {
+      "question": "Ile maksymalnie można odpisać za bateryjny pojazd zeroemisyjny w firmie?",
+      "expected_id": "0111-KDIB1-3.4010.5",
+      "category": "Colloquial Paraphrase"
+    },
+    {
+      "question": "Kiedy w usługach IT stosuje się ryczałt 8,5% zamiast 12% przy PKWiU 62.01?",
+      "expected_id": "0113-KDIPT2-1.4011.6",
+      "category": "Exact Legal Classification"
+    },
+    {
+      "question": "Rozliczenie opłat za ogrzewanie i sieć przy wykonywaniu zlecenia z własnego lokalu",
+      "expected_id": "0114-KDIP3-2.4011.7",
+      "category": "Colloquial Paraphrase"
+    },
+    {
+      "question": "Jak wystawić fakturę VAT za pisanie kodu dla klienta ze Stanów Zjednoczonych (art. 28b)?",
+      "expected_id": "0112-KDIL1-3.4012.8",
+      "category": "Standard Semantic"
+    }
+  ]
+}
