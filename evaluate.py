@@ -1,5 +1,5 @@
-import os
 import json
+from pathlib import Path
 import pandas as pd
 import torch
 from search_engine import HybridTaxSearchEngine
@@ -7,6 +7,10 @@ from train_adapter import TaxDomainAdapter
 
 pd.set_option("display.max_colwidth", None)
 pd.set_option("display.width", 1000)
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_PATH = BASE_DIR / "data" / "tax_benchmark.json"
+ADAPTER_PATH = BASE_DIR / "tax_adapter.pt"
 
 
 def evaluate_predictions(sim_matrix: torch.Tensor, rulings: list[dict], queries: list[dict], method_name: str):
@@ -38,7 +42,7 @@ def evaluate_predictions(sim_matrix: torch.Tensor, rulings: list[dict], queries:
 
 
 def main():
-    with open("data/tax_benchmark.json", "r", encoding="utf-8") as f:
+    with open(DATA_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     rulings = data["rulings"]
@@ -54,13 +58,10 @@ def main():
         ("3. PyTorch + Polish MMLW-RoBERTa (Dense, alpha=1.0)", engine_mmlw.compute_similarity_matrix(question_texts, alpha=1.0)),
     ]
 
-    if os.path.exists("tax_adapter.pt"):
+    if ADAPTER_PATH.exists():
         adapter = TaxDomainAdapter(embedding_dim=768, rank=16)
-        adapter.load_state_dict(torch.load("tax_adapter.pt", map_location="cpu", weights_only=True))
-        adapter.eval()
-        with torch.no_grad():
-            q_emb = engine_mmlw._encode_texts([f"zapytanie: {q}" for q in question_texts])
-            adapted_dense_sim = adapter(q_emb) @ adapter(engine_mmlw.dense_doc_matrix).T
+        adapter.load_state_dict(torch.load(ADAPTER_PATH, map_location="cpu", weights_only=True))
+        adapted_dense_sim = engine_mmlw.compute_similarity_matrix(question_texts, alpha=1.0, adapter=adapter)
         configs.append(("4. PyTorch + Polish MMLW + Trained LoRA Adapter (Dense)", adapted_dense_sim))
 
     configs.extend([
@@ -77,7 +78,6 @@ def main():
         diag_df[f"M{idx}_Rank"] = ranks
 
     print(pd.DataFrame(summaries).to_markdown(index=False))
-
     print("\n====================================== PER-QUESTION RANK (1 = Perfect) ======================================")
     print(diag_df.to_markdown(index=False))
 

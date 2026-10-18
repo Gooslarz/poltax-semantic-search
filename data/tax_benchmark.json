@@ -47,6 +47,30 @@
       "tax": "VAT",
       "title": "Eksport usług IT dla kontrahenta z USA (odwrotne obciążenie)",
       "text": "Świadczenie usług programistycznych i doradczych w zakresie informatyki na rzecz spółki z siedzibą w Stanach Zjednoczonych (poza terytorium Unii Europejskiej) nie podlega opodatkowaniu podatkiem VAT w Polsce zgodnie z art. 28b ustawy o VAT; fakturę wystawia się ze stawką NP (nie podlega)."
+    },
+    {
+      "id": "0114-KDIP3-1.4011.9-DISTRACTOR",
+      "tax": "PIT",
+      "title": "Zakup monitora ekranowego i fotela ergonomicznego w B2B",
+      "text": "Wydatki poniesione przez programistę prowadzącego działalność gospodarczą na zakup monitora ekranowego, klawiatury oraz ergonomicznego krzesła biurowego stanowią w całości koszty uzyskania przychodów, gdyż sprzęt ten jest bezpośrednio wykorzystywany do tworzenia oprogramowania."
+    },
+    {
+      "id": "0112-KDIL2-2.4011.10-DISTRACTOR",
+      "tax": "PIT",
+      "title": "Ulga badawczo-rozwojowa (B+R) w działalności programistycznej",
+      "text": "Podatnik prowadzący prace rozwojowe nad nowym systemem informatycznym może w ramach ulgi B+R (art. 26e ustawy o PIT) odliczyć od podstawy opodatkowania koszty kwalifikowane poniesione na wynagrodzenia pracowników oraz zakup sprzętu specjalistycznego."
+    },
+    {
+      "id": "0115-KDIT1-1.4012.11-DISTRACTOR",
+      "tax": "VAT",
+      "title": "Stawka podstawowa VAT 23% na okulary przeciwsłoneczne",
+      "text": "Sprzedaż okularów przeciwsłonecznych niebędących wyrobami medycznymi w rozumieniu ustawy o wyrobach medycznych w salonie optycznym podlega opodatkowaniu podstawową stawką podatku od towarów i usług (VAT) w wysokości 23%."
+    },
+    {
+      "id": "0111-KDIB1-3.4010.12-DISTRACTOR",
+      "tax": "PIT",
+      "title": "Wydatki eksploatacyjne samochodu prywatnego w firmie (limit 20%)",
+      "text": "W przypadku wykorzystywania w jednoosobowej działalności gospodarczej prywatnego samochodu osobowego niewprowadzonego do ewidencji środków trwałych, do kosztów uzyskania przychodów można zaliczyć jedynie 20% poniesionych wydatków na paliwo, serwis oraz ubezpieczenie."
     }
   ],
   "queries": [
